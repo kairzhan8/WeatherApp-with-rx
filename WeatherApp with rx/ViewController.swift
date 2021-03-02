@@ -22,7 +22,9 @@ class ViewController: UIViewController {
         
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        self.cityNameTextField.rx.value
+        self.cityNameTextField.rx.controlEvent(.editingDidEndOnExit)
+            .asObservable()
+            .map { self.cityNameTextField.text}
             .subscribe(onNext: { city in
                 if let city = city {
                     if city.isEmpty {
@@ -31,9 +33,8 @@ class ViewController: UIViewController {
                         self.fetchWeather(by: city)
                     }
                 }
-                
             }).disposed(by: disposeBag)
-    }
+        }
     
     private func fetchWeather(by city: String) {
         guard let cityEncoded = city.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed),
