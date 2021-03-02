@@ -16,6 +16,7 @@
 		5516AAC025E9126C001604EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5516AABE25E9126C001604EB /* LaunchScreen.storyboard */; };
 		5516AACA25E915AA001604EB /* WeatherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516AAC925E915AA001604EB /* WeatherResult.swift */; };
 		5516AAD425E91A98001604EB /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516AAD325E91A98001604EB /* URLRequest+Extension.swift */; };
+		5584E82425EE0C5300025251 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5584E82325EE0C5300025251 /* URL+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		5516AAC125E9126C001604EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5516AAC925E915AA001604EB /* WeatherResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResult.swift; sourceTree = "<group>"; };
 		5516AAD325E91A98001604EB /* URLRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
+		5584E82325EE0C5300025251 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		A7AE13769E413DADDD3C7521 /* Pods_WeatherApp_with_rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp_with_rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				5516AAD325E91A98001604EB /* URLRequest+Extension.swift */,
+				5584E82325EE0C5300025251 /* URL+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				5516AACA25E915AA001604EB /* WeatherResult.swift in Sources */,
 				5516AAB425E9126C001604EB /* AppDelegate.swift in Sources */,
 				5516AAB625E9126C001604EB /* SceneDelegate.swift in Sources */,
+				5584E82425EE0C5300025251 /* URL+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
