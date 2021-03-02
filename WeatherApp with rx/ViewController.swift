@@ -41,9 +41,16 @@ class ViewController: UIViewController {
               let url = URL.urlForWeatherAPI(city: cityEncoded) else { return }
         let resource = Resource<WeatherResult>(url: url)
         
+//        let search = URLRequest.load(resource: resource)
+//            .observe(on: MainScheduler.instance)
+//            .asDriver(onErrorJustReturn: WeatherResult.empty)
+        
         let search = URLRequest.load(resource: resource)
             .observe(on: MainScheduler.instance)
-            .asDriver(onErrorJustReturn: WeatherResult.empty)
+            .catch { (error) -> Observable<WeatherResult> in
+                print(error.localizedDescription)
+                return Observable.just(WeatherResult.empty)
+            }.asDriver(onErrorJustReturn: WeatherResult.empty)
             
         search.map { "\($0.main.temp) ℃"}
             .drive(self.temperatureLabel.rx.text)
